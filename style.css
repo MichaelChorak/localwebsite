@@ -7,6 +7,7 @@ body {
 
 :root {
     --main-green: #69b550;
+    --main-font: font-family: 'Oswald', sans-serif;
     --text-color: #555;
 }
 
@@ -22,6 +23,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 header > div:first-of-type {
@@ -74,7 +76,7 @@ nav > div:last-of-type {
     background-color: var(--main-green);
     padding: 6px 0px;
     border-radius: 2px;
-    width: 20%;
+    width: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,10 +124,10 @@ li::before {
         bottom: 0;
         left: 0;
         z-index: -1;
-        background-image: url(images/hero-bg2.jpg); /*Put your image url*/
+        background-image: url(images/hero-bg3.jpg); /*Put your image url*/
         background-size: cover;
         background-position: center;
-        opacity: 0.50; /*Value from 0.0 to 1.0*/
+        opacity: 0.80; /*Value from 0.0 to 1.0*/
   }
 
   #hero-container {
@@ -162,4 +164,38 @@ li::before {
   .hero-content {
     width: 100%;
     height: 100%;
+  }
+
+  .buttons-container > button:first-of-type {
+    background-color: var(--main-green);
+    font-family: var(--main-font);
+    border: 1px solid;
+    border-color: var(--main-green)
+  }
+  .buttons-container > button:last-of-type {
+    color: var(--text-color);
+    font-family: var(--main-font);
+    border: none;
+    margin-left: 20px;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+  }
+
+  .basic-button-styling {
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 1.25rem;
+  }
+
+  #counter {
+    height: 20vh;
+    width: 100%;
+    background-color: var(--main-green);
+  }
+
+  #counter-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
