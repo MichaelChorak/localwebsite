@@ -1,2 +1,2 @@
-# localwebsite
-Just a simple website :) published under creative commons!
+# Restaurant website
+published under creative commons!
