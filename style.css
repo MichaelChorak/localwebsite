@@ -23,12 +23,13 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--main-green)
+    background-color: #fff;
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
 
 }
 
 a{ 
-  color: #fff;
+  color: var(--text-color);
   text-decoration: none;
 }
 
@@ -61,7 +62,7 @@ li {
 }
 
 .nav-link:hover {
-  color: rgb(211, 211, 218);
+  color: var(--main-green);
 }
 
 .hamburger {
