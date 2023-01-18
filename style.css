@@ -23,9 +23,99 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #fff;
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
 
 }
 
+a{ 
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.navbar {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 24px;
+  width: 100%;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.nav-branding {
+  font-size: 2rem;
+}
+
+.nav-link {
+  transition: 0.7s ease;
+}
+
+.nav-link:hover {
+  color: var(--main-green);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+}
+
+@media (max-width: 768px){
+  .hamburger{
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2){
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg) 
+ }
+  .hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg) 
+ }
+ .nav-menu{
+  position: fixed;
+  left: -100%;
+  top: 75px;
+  gap: 0;
+  flex-direction: column;
+  background-color: var(--main-green);
+  width: 100%;
+  text-align: center;
+  transition: 0.3s;
+  padding: 0;
+ }
+
+ nav-item{
+  margin: 16px 0;
+ }
+
+ .nav-menu.active{
+  left: 0 !important;
+  z-index: 1000;
+ }
+}
 header > div:first-of-type {
     height: 100%;
 }
@@ -54,11 +144,6 @@ header > div > nav {
     height: 100%;
 }
 
-figure {
-    height: 100%;
-}
-
-
 header > div > nav > ul {
     display: flex;
     width: 100%;
@@ -72,16 +157,6 @@ header > div > nav > ul > li {
     cursor: pointer;
 }
 
-nav > div:last-of-type {
-    background-color: var(--main-green);
-    padding: 6px 0px;
-    border-radius: 2px;
-    width: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
 
 nav > div:last-of-type > a {
     position: relative;
@@ -89,26 +164,6 @@ nav > div:last-of-type > a {
     /* text-decoration: none; */
 }
 
-li::before {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #000;
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-  }
-
-  li:hover {
-    color: #000;
-  }
-
-  li:hover::before {
-    transform: scaleX(1);
-  }
 
   #hero {
     position: relative;
